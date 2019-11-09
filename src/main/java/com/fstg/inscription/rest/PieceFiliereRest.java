@@ -5,6 +5,7 @@
  */
 package com.fstg.inscription.rest;
 
+import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceFiliere;
 import com.fstg.inscription.service.PieceFiliereService;
 import java.util.List;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 /**
  *
  * @author Imane
@@ -23,15 +23,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/inscription-api/pieceFiliere") // pour dire : acceder a cette classe par ce lien
 public class PieceFiliereRest {
+
     @Autowired
-    private PieceFiliereService pieceFiliereService ;
-@PostMapping("/")
+    private PieceFiliereService pieceFiliereService;
+
+    @GetMapping("/filiere")
+    public List<PieceFiliere> findByFilier(@RequestBody Filiere filiere) {
+        return pieceFiliereService.findByFilier(filiere);
+    }
+
+    @PostMapping("/")
     public void save(@RequestBody PieceFiliere pieceFiliere) {
         pieceFiliereService.save(pieceFiliere);
     }
-@GetMapping("/")
+
+    @GetMapping("/")
     public List<PieceFiliere> findAll() {
         return pieceFiliereService.findAll();
     }
-    
+
 }

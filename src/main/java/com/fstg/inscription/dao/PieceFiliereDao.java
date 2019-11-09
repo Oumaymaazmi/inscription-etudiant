@@ -5,7 +5,9 @@
  */
 package com.fstg.inscription.dao;
 
+import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceFiliere;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,5 +17,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository 
 public interface PieceFiliereDao extends JpaRepository<PieceFiliere, Long>{
-    
+        public List<PieceFiliere> findByFiliere(Filiere filiere);
+
 }

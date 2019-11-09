@@ -5,6 +5,7 @@
  */
 package com.fstg.inscription.service.impl;
 
+import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceFiliere;
 import com.fstg.inscription.dao.PieceFiliereDao;
 import com.fstg.inscription.service.PieceFiliereService;
@@ -29,6 +30,11 @@ public class PieceFiliereServiceImpl implements PieceFiliereService{
     @Override
     public List<PieceFiliere> findAll() {
        return pieceFiliereDao.findAll();
+    }
+
+    @Override
+    public List<PieceFiliere> findByFilier(Filiere filiere) {
+         return pieceFiliereDao.findByFiliere(filiere);
     }
 
     
