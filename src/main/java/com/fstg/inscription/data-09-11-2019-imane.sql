@@ -35,16 +35,6 @@ INSERT INTO `etudiant` (`id`, `adresse`, `cne`, `cni`, `date_naissance`, `nom`, 
 -- Déchargement des données de la table `hibernate_sequence`
 --
 
-INSERT INTO `hibernate_sequence` (`next_val`) VALUES
-(14),
-(14),
-(14),
-(14),
-(14),
-(14),
-(14),
-(14),
-(14);
 
 --
 -- Déchargement des données de la table `piece`
