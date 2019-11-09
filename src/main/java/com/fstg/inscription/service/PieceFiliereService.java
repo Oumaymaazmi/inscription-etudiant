@@ -5,6 +5,7 @@
  */
 package com.fstg.inscription.service;
 
+import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceFiliere;
 import java.util.List;
 
@@ -15,4 +16,6 @@ import java.util.List;
 public interface PieceFiliereService {
     public void save(PieceFiliere pieceFiliere);
     public List<PieceFiliere> findAll();
+    public List<PieceFiliere> findByFilier(Filiere filiere);
+    
 }
