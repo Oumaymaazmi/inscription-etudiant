@@ -17,15 +17,16 @@ import org.springframework.stereotype.Service;
  * @author Imane
  */
 @Service
-public class EtudiantServiceImpl implements EtudiantService{
+public class EtudiantServiceImpl implements EtudiantService {
 
-    @Override
-    public void deleteByCne(String cne) {
-         etudiantDao.deleteByCne(cne);
-    }
     @Autowired
     private EtudiantDao etudiantDao;
-    
+
+    @Override
+    public void deleteById(Long id) {
+        etudiantDao.deleteById(id);
+    }
+
     @Override
     public void save(Etudiant etudiant) {
         etudiantDao.save(etudiant);
@@ -33,7 +34,7 @@ public class EtudiantServiceImpl implements EtudiantService{
 
     @Override
     public List<Etudiant> findAll() {
-       return etudiantDao.findAll();
+        return etudiantDao.findAll();
     }
 
     @Override
