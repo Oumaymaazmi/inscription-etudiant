@@ -5,7 +5,7 @@
  */
 package com.fstg.inscription.dao;
 
-import com.fstg.inscription.bean.PieceInscription;
+import com.fstg.inscription.bean.Responsable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +14,8 @@ import org.springframework.stereotype.Repository;
  * @author momo
  */
 @Repository
-public interface PieceInscriptionDao extends JpaRepository<PieceInscription, Long>{
-    
-    
+public interface ResponsableDao  extends JpaRepository<Responsable, Long>{
+        public Responsable findByCni(String cni);
+
 }
+  

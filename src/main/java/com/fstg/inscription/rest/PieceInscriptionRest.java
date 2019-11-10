@@ -6,6 +6,8 @@
 package com.fstg.inscription.rest;
 
 import com.fstg.inscription.bean.PieceInscription;
+import com.fstg.inscription.service.PieceInscriptionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,5 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/inscription-api/pieceInscription")
 public class PieceInscriptionRest {
+    @Autowired
+    private PieceInscriptionService pieceInscriptionService;
+    
+    
     
 }
