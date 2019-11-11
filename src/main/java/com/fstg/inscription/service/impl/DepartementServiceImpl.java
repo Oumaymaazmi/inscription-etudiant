@@ -6,9 +6,11 @@
 package com.fstg.inscription.service.impl;
 
 import com.fstg.inscription.bean.Departement;
+import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.dao.DepartementDao;
 import com.fstg.inscription.service.DepartementService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,8 +19,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DepartementServiceImpl implements DepartementService{
+    @Autowired
     private DepartementDao departementDao;
 
+   
+
+    @Override
     public Departement findByLibelle(String libelle) {
         return departementDao.findByLibelle(libelle);
     }
@@ -32,4 +38,35 @@ public class DepartementServiceImpl implements DepartementService{
     public List<Departement> findAll() {
         return departementDao.findAll();
     }
-}
+
+   
+   
+
+    @Override
+    public List<Filiere> findAllFiliere(String libelle) {
+       Departement myDepartement=departementDao.findByLibelle(libelle);
+       return myDepartement.getFiliere();
+
+     }
+
+    @Override
+    public Departement edit(long id, Departement departement) {
+     Departement myDepartement=departementDao.findById(id).get();
+     departement.setId(id);
+     departementDao.save(departement);
+     return departement;
+    }
+
+    @Override
+    public boolean findByFiliere(Departement departement, String libelle) {
+     List<Filiere> l;
+      
+     l= departementDao.findAllFiliere(departement.getLibelle());
+     for (int i=0;i<l.size();i++){
+            return if (l.get(i).getLibelle()= libelle) ;
+  
+    }
+        return false;
+    }
+
+
