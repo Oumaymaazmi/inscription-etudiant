@@ -6,8 +6,10 @@
 package com.fstg.inscription.service.impl;
 
 import com.fstg.inscription.bean.Filiere;
+import com.fstg.inscription.bean.PieceFiliere;
 import com.fstg.inscription.dao.FiliereDao;
 import com.fstg.inscription.service.FiliereService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,11 @@ public class FiliereServiceImpl implements FiliereService{
     @Override
     public Filiere findBylibelle(String libelle) {
         return filiereDao.findBylibelle(libelle);
+    }
+
+    @Override
+    public List<PieceFiliere> findbyFiliere(String libelle) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

@@ -22,6 +22,8 @@ public class DepartementServiceImpl implements DepartementService{
     @Autowired
     private DepartementDao departementDao;
 
+    
+
    
 
     @Override
@@ -57,16 +59,6 @@ public class DepartementServiceImpl implements DepartementService{
      return departement;
     }
 
-    @Override
-    public boolean findByFiliere(Departement departement, String libelle) {
-     List<Filiere> l;
-      
-     l= departementDao.findAllFiliere(departement.getLibelle());
-     for (int i=0;i<l.size();i++){
-            return if (l.get(i).getLibelle()= libelle) ;
-  
-    }
-        return false;
-    }
-
+    
+   }
 

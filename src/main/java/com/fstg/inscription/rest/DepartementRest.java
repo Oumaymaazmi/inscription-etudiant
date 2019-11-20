@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.fstg.inscription.rest;
 
 import com.fstg.inscription.bean.Departement;
@@ -39,10 +35,7 @@ public class DepartementRest  {
     public Departement findByLibelle(@PathVariable String libelle) {
         return departementService.findByLibelle(libelle);
     }
-    @GetMapping("/departement/{filiere}")
-    public boolean findByFiliere(@RequestBody Departement departement,@PathVariable String libelle) {
-        return departementService.findByFiliere(departement, libelle);
-    }
+   
     @GetMapping("/departement/{departement}")
     public List<Filiere> findAllFiliere(@PathVariable String libelle) {
         return departementService.findAllFiliere(libelle);

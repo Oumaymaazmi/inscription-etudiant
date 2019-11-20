@@ -17,7 +17,6 @@ public interface DepartementService {
     public void  save(Departement departement);
     public List<Departement> findAll();
     public Departement findByLibelle(String libelle);
-    public boolean findByFiliere(Departement departement ,String libelle); // si tel filiere exsite sur ce depertament
     public List<Filiere> findAllFiliere(String libelle); //sitez tous les filiere dan le departement
     public Departement edit(long id,Departement departement); //add depertement
    
