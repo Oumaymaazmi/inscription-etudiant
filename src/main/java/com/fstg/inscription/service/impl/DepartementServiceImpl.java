@@ -18,11 +18,10 @@ import org.springframework.stereotype.Service;
  * @author Imane
  */
 @Service
-public class DepartementServiceImpl implements DepartementService{
+public class DepartementServiceImpl implements DepartementService {
+
     @Autowired
     private DepartementDao departementDao;
-
-   
 
     @Override
     public Departement findByLibelle(String libelle) {
@@ -39,34 +38,30 @@ public class DepartementServiceImpl implements DepartementService{
         return departementDao.findAll();
     }
 
-   
-   
-
     @Override
-    public List<Filiere> findAllFiliere(String libelle) {
-       Departement myDepartement=departementDao.findByLibelle(libelle);
-       return myDepartement.getFiliere();
+    public List<Filiere> findAllFiliere(String libDepartement) {
+        Departement myDepartement = departementDao.findByLibelle(libDepartement);
+        return myDepartement.getFiliere();
 
-     }
+    }
 
     @Override
     public Departement edit(long id, Departement departement) {
-     Departement myDepartement=departementDao.findById(id).get();
-     departement.setId(id);
-     departementDao.save(departement);
-     return departement;
+        Departement myDepartement = departementDao.findById(id).get();
+        departement.setId(id);
+        departementDao.save(departement);
+        return departement;
     }
 
-    @Override
-    public boolean findByFiliere(Departement departement, String libelle) {
-     List<Filiere> l;
-      
-     l= departementDao.findAllFiliere(departement.getLibelle());
-     for (int i=0;i<l.size();i++){
-            return if (l.get(i).getLibelle()= libelle) ;
-  
-    }
-        return false;
-    }
-
-
+//    @Override
+//    public boolean existFiliere(Departement departement, String libelle) {
+//        List<Filiere> filieres = departementDao.findByDepartementLibelle(departement.getLibelle());
+//        for (int i = 0; i < filieres.size(); i++) {
+//            if (filieres.get(i).getLibelle().equals(libelle)) {
+//                return true;
+//            }
+//        }
+//        return false;
+//
+//    }
+}

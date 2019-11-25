@@ -6,6 +6,7 @@
 package com.fstg.inscription.dao;
 
 import com.fstg.inscription.bean.Filiere;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,8 +15,10 @@ import org.springframework.stereotype.Repository;
  * @author momo
  */
 @Repository
-public interface FiliereDao extends JpaRepository<Filiere , Long>{
-    
-        public Filiere findBylibelle(String libelle);
+public interface FiliereDao extends JpaRepository<Filiere, Long> {
+
+    public Filiere findBylibelle(String libelle);
+
+    public List<Filiere> findByDepartementLibelle(String libelle);
 
 }
