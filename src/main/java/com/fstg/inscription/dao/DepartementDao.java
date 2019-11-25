@@ -19,8 +19,9 @@ import org.springframework.stereotype.Repository;
 public interface DepartementDao extends JpaRepository<Departement, Long>{
     public Departement findByLibelle(String libelle);
      public List<Filiere> findAllFiliere(String libelle);
-         public boolean findByFiliere(Departement departement, String libelle);
-             public List<Filiere> findBytypeFilire(String libelle,String type);
+     public boolean findByFiliere(Departement departement, String libelle);
+    public List<Filiere> findBytypeFilire(String libelle,String type);
+    
 
 
 
