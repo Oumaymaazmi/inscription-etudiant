@@ -16,6 +16,7 @@ public interface EtudiantService {
     public void save(Etudiant etudiant);
     public List<Etudiant> findAll();
     public Etudiant findByCne(String cne);
-    public void deleteById(Long id);
+
+    
 
 }

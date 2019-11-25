@@ -5,6 +5,8 @@
  */
 package com.fstg.inscription.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
@@ -54,11 +56,12 @@ public class Departement implements Serializable{
     public void setAbreviation(String abreviation) {
         this.abreviation = abreviation;
     }
-
+    @JsonIgnore
     public List<Filiere> getFiliere() {
         return filiere;
     }
-
+  @JsonSetter
+  
     public void setFiliere(List<Filiere> filiere) {
         this.filiere = filiere;
     }

@@ -10,11 +10,13 @@ import com.fstg.inscription.dao.ResponsableDao;
 import com.fstg.inscription.service.ResponsableService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author momo
  */
+@Service
 public class ResponsableServiceImpl  implements ResponsableService{
     @Autowired
     private ResponsableDao responsableDao;

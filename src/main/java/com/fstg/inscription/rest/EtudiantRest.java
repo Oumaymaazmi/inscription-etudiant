@@ -37,11 +37,7 @@ public class EtudiantRest {
         return etudiantService.findAll();
     }
 
-    
-    @DeleteMapping("/id/{id}")
-    public void deleteById(@PathVariable Long id) {
-        etudiantService.deleteById(id);
-    }
+   
 
     @GetMapping("/cne/{cne}")
     public Etudiant findByCne(@PathVariable String cne) {

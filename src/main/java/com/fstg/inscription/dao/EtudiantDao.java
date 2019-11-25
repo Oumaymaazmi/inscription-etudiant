@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EtudiantDao extends JpaRepository<Etudiant, Long>{
     public Etudiant findByCne(String cne);
-    public void deleteByCne(String cne);
+
+
 }
 

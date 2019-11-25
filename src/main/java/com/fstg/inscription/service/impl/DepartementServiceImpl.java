@@ -18,13 +18,10 @@ import org.springframework.stereotype.Service;
  * @author Imane
  */
 @Service
-public class DepartementServiceImpl implements DepartementService{
+public class DepartementServiceImpl implements DepartementService {
+
     @Autowired
     private DepartementDao departementDao;
-
-    
-
-   
 
     @Override
     public Departement findByLibelle(String libelle) {
@@ -44,21 +41,4 @@ public class DepartementServiceImpl implements DepartementService{
    
    
 
-    @Override
-    public List<Filiere> findAllFiliere(String libelle) {
-       Departement myDepartement=departementDao.findByLibelle(libelle);
-       return myDepartement.getFiliere();
-
-     }
-
-    @Override
-    public Departement edit(long id, Departement departement) {
-     Departement myDepartement=departementDao.findById(id).get();
-     departement.setId(id);
-     departementDao.save(departement);
-     return departement;
-    }
-
-    
-   }
-
+}

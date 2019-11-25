@@ -16,8 +16,7 @@ import java.util.List;
 public interface FiliereService {
     public void save(Filiere filiere);
     public Filiere findBylibelle(String libelle);
-    public List<PieceFiliere> findbyFiliere(String libelle);
-    
+
 
     
 }

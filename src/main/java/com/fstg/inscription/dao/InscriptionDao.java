@@ -5,6 +5,8 @@
  */
 package com.fstg.inscription.dao;
 
+import com.fstg.inscription.bean.Inscription;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,6 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author Imane
  */
 @Repository
-public interface InscriptionDao {
+public interface InscriptionDao  extends JpaRepository<Inscription, Long>{
     
 }
