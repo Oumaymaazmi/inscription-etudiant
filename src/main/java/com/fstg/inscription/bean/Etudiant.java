@@ -34,6 +34,7 @@ public class Etudiant implements Serializable {
     private String ville;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateNaissance; 
+    
 
     public String getCni() {
         return cni;

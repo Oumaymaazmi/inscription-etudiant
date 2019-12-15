@@ -7,6 +7,7 @@ package com.fstg.inscription.service;
 
 import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceFiliere;
+import static java.util.Collections.list;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ import java.util.List;
 public interface FiliereService {
     public void save(Filiere filiere);
     public Filiere findBylibelle(String libelle);
-
+     public List<Filiere> findAll();
 
     
 }

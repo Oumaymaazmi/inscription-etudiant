@@ -15,6 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -30,7 +31,7 @@ public class Departement implements Serializable{
     private String abreviation;
     @OneToMany
     private List<Filiere> filiere;
-    @ManyToOne
+    @OneToOne
     private Responsable responsable;
 
     public long getId() {
