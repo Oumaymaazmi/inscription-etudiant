@@ -18,5 +18,5 @@ public interface DepartementDao extends JpaRepository<Departement, Long> {
 
     public Departement findByLibelle(String libelle);
 
-    //public boolean findByFiliere(String libelle);
+    
 }

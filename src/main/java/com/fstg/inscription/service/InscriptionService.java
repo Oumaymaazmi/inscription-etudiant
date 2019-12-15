@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fstg.inscription.dao;
+package com.fstg.inscription.service;
 
 import com.fstg.inscription.bean.Inscription;
 import java.util.Date;
 import java.util.List;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Imane
  */
-@Repository
-public interface InscriptionDao extends JpaRepository<Inscription, Long>{
+public interface InscriptionService {
+    public void save(Inscription inscription);
     public List<Inscription> findByDateInscription(Date dateInscrition);
-    public Inscription findByEtudiantCne(String cne);
     public List<Inscription> findByFiliereLibelle(String libelle);
+    public List<Inscription> findAll();
+    public Inscription findByEtudiantCne(String cne);
 }

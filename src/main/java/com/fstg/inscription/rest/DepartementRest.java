@@ -42,18 +42,6 @@ public class DepartementRest {
     public Departement findByLibelle(@PathVariable String libelle) {
         return departementService.findByLibelle(libelle);
     }
-//    @GetMapping("/departement/{filiere}")
-//    public boolean findByFiliere(@RequestBody Departement departement,@PathVariable String libelle) {
-//        return departementService.findByFiliere(departement, libelle);
-//    }
 
-    @GetMapping("/{departement}")
-    public List<Filiere> findByDepartement(@PathVariable String libelle) {
-        return departementService.findAllFiliere(libelle);
-    }
-//    @PutMapping("/{id}")
-//    public Departement edit(long id, Departement departement) {
-//        return departementService.edit(id, departement);
-//    }
 
 }
