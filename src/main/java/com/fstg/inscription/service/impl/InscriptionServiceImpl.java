@@ -30,11 +30,7 @@ public class InscriptionServiceImpl implements InscriptionService{
         inscriptionDao.save(inscription);
     }
     
-    @Override
-    public List<Inscription> findByDateInscription(Date dateInscrition) {
-        
-       return inscriptionDao.findByDateInscription(dateInscrition);
-    }
+  
 
     @Override
     public List<Inscription> findByFiliereLibelle(String libelle) {
@@ -50,6 +46,11 @@ public class InscriptionServiceImpl implements InscriptionService{
     @Override
     public List<Inscription> findAll() {
         return inscriptionDao.findAll();
+    }
+
+    @Override
+    public List<Inscription> findByDateInscription(Date dateInscrition) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

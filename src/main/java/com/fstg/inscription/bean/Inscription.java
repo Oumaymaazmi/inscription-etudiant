@@ -57,21 +57,7 @@ public class Inscription implements Serializable {
 
     
     
-    public int getNbrEntree() {
-        return nbrEntree;
-    }
-
-    public void setNbrEntree(int nbrEntree) {
-        this.nbrEntree = nbrEntree;
-    }
-
-    public int getNbrExige() {
-        return nbrExige;
-    }
-
-    public void setNbrExige(int nbrExige) {
-        this.nbrExige = nbrExige;
-    }
+   
  
     public Etudiant getEtudiant() {
         return etudiant;
