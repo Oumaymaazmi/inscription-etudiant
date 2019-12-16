@@ -44,6 +44,7 @@ public class DepartementServiceImpl implements DepartementService {
 //        return departementDao.edit(departement);
 //    }
 
+<<<<<<< HEAD
 
 //    @Override
 //    public List<Filiere> findAllFiliere(String libDepartement) {
@@ -71,4 +72,7 @@ public class DepartementServiceImpl implements DepartementService {
 //        return false;
 //
 //    }
+=======
+   
+>>>>>>> branch 'master' of https://github.com/imaneEmi/-inscription-v2.git
 }
