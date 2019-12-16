@@ -21,7 +21,7 @@ public interface DepartementDao extends JpaRepository<Departement, Long> {
 
     public Departement findByLibelle(String libelle);
     public List<Departement> findAll();
-	//public Departement edit(Departement departement);
+	// public Departement edit(Departement departement);
 
     
 }
