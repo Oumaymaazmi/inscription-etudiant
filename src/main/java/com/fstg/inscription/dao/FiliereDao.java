@@ -21,4 +21,5 @@ public interface FiliereDao extends JpaRepository<Filiere, Long> {
 
     public List<Filiere> findByDepartementLibelle(String libelle);
 
+   
 }

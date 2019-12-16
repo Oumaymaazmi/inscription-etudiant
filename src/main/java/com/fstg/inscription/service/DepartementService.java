@@ -17,9 +17,10 @@ public interface DepartementService {
     public void  save(Departement departement);
     public List<Departement> findAll();
     public Departement findByLibelle(String libelle);
+   // public Departement edit(Departement departement);
 //    public boolean existFiliere(Departement departement ,String libFiliere); // si tel filiere exsite sur ce depertament
-    public List<Filiere> findAllFiliere(String libDepartement); //listez tous les filiere dans le departement
-    public Departement edit(long id,Departement departement); //add depertement
+   // public List<Filiere> findAllFiliere(String libDepartement); //listez tous les filiere dans le departement
+    //add depertement
    
 
 }

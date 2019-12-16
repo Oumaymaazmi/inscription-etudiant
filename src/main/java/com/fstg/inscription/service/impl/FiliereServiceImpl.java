@@ -5,11 +5,14 @@
  */
 package com.fstg.inscription.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.dao.FiliereDao;
 import com.fstg.inscription.service.FiliereService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
+import antlr.collections.List;
 
 /**
  *
@@ -30,6 +33,37 @@ public class FiliereServiceImpl implements FiliereService{
     public Filiere findBylibelle(String libelle) {
         return filiereDao.findBylibelle(libelle);
     }
+
+	@Override
+	public java.util.List<Filiere> findByDepartementLibelle(String libelle) {
+		return filiereDao.findByDepartementLibelle(libelle);
+	}
+
+	@Override
+	public java.util.List<Filiere> findAll() {
+		
+		return filiereDao.findAll();
+	}
+
+//	@Override
+//	public Filiere edit(long id, Filiere filiere) {
+//		
+//		return filiereDao.Filiere edit(long id,Filiere filiere);;
+//	}
+
+	
+
+	
+	
+	
+
+	
+    
+    
     
     
 }
+    
+    
+    
+

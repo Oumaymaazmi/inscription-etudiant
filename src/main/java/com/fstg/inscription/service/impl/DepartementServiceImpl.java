@@ -37,21 +37,28 @@ public class DepartementServiceImpl implements DepartementService {
     public List<Departement> findAll() {
         return departementDao.findAll();
     }
+    
+//    @Override
+//    public Departement edit(Departement departement) {
+//        
+//        return departementDao.edit(departement);
+//    }
 
-    @Override
-    public List<Filiere> findAllFiliere(String libDepartement) {
-        Departement myDepartement = departementDao.findByLibelle(libDepartement);
-        return myDepartement.getFiliere();
 
-    }
+//    @Override
+//    public List<Filiere> findAllFiliere(String libDepartement) {
+//        Departement myDepartement = departementDao.findByLibelle(libDepartement);
+//        return myDepartement.getFiliere();
+//
+//    }
 
-    @Override
-    public Departement edit(long id, Departement departement) {
-        Departement myDepartement = departementDao.findById(id).get();
-        departement.setId(id);
-        departementDao.save(departement);
-        return departement;
-    }
+//    @Override
+//    public Departement edit(long id, Departement departement) {
+//        Departement myDepartement = departementDao.findById(id).get();
+//        departement.setId(id);
+//        departementDao.save(departement);
+//        return departement;
+//    }
 
 //    @Override
 //    public boolean existFiliere(Departement departement, String libelle) {

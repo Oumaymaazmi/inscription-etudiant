@@ -17,5 +17,6 @@ public interface PieceFiliereService {
     public void save(PieceFiliere pieceFiliere);
     public List<PieceFiliere> findAll();
     public List<PieceFiliere> findByFilier(Filiere filiere);
+  //  public List<PieceFiliere> findBylibelleFiliereAndlibelleTypeFiliere (String libelleFiliere ,String libelleTypeFiliere);
     
 }

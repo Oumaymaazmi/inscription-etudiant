@@ -6,11 +6,14 @@
 package com.fstg.inscription.bean;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
 
 /**
  *
@@ -86,5 +89,11 @@ public class PieceFiliere implements Serializable {
     public String toString() {
         return "com.fstg.inscription.bean.PieceFilliere[ id=" + id + " ]";
     }
+    
+ 
+    
+    
+    
+    
     
 }
