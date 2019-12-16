@@ -7,6 +7,7 @@ package com.fstg.inscription.service.impl;
 
 import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceFiliere;
+import com.fstg.inscription.bean.TypeFiliere;
 import com.fstg.inscription.dao.PieceFiliereDao;
 import com.fstg.inscription.service.PieceFiliereService;
 import java.util.List;
@@ -37,6 +38,13 @@ public class PieceFiliereServiceImpl implements PieceFiliereService{
          return pieceFiliereDao.findByFiliere(filiere);
     }
 
-    
+//    @Override
+//    public List<PieceFiliere> findBylibelleFiliereAndlibelleTypeFiliere (String libelleFiliere ,String libelleTypeFiliere){
+//   
+//   //	 List<PieceFiliere>res=new ArrayList<PieceFiliere>();
+//    	return pieceFiliereDao.findByFiliereLibelleAndTypeFiliereLibelle(libelleFiliere, libelleTypeFiliere);
+//   	
+//   }
+   
     
 }

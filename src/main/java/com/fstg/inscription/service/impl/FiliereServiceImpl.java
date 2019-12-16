@@ -5,21 +5,21 @@
  */
 package com.fstg.inscription.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.fstg.inscription.bean.Filiere;
-import com.fstg.inscription.bean.PieceFiliere;
 import com.fstg.inscription.dao.DepartementDao;
 import com.fstg.inscription.dao.FiliereDao;
 import com.fstg.inscription.service.FiliereService;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 /**
  *
  * @author momo
  */
 @Service
-public class FiliereServiceImpl implements FiliereService{
+public class FiliereServiceImpl implements FiliereService {
+
     @Autowired
     private FiliereDao filiereDao;
     @Autowired
@@ -27,8 +27,8 @@ public class FiliereServiceImpl implements FiliereService{
 
     @Override
     public void save(Filiere filiere) {
-         filiereDao.save(filiere);
-        
+        filiereDao.save(filiere);
+
     }
 
     @Override
@@ -37,13 +37,20 @@ public class FiliereServiceImpl implements FiliereService{
     }
 
     @Override
-    public List<Filiere> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public java.util.List<Filiere> findByDepartementLibelle(String libelle) {
+        //return filiereDao.findByDepartementLibelle(libelle);
+        return null;
     }
 
-  
+    @Override
+    public java.util.List<Filiere> findAll() {
 
-    
-   
-   
+        return filiereDao.findAll();
+    }
+
+//	@Override
+//	public Filiere edit(long id, Filiere filiere) {
+//		
+//		return filiereDao.Filiere edit(long id,Filiere filiere);;
+//	}
 }

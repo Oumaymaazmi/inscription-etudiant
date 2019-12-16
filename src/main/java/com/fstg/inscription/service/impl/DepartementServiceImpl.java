@@ -37,6 +37,42 @@ public class DepartementServiceImpl implements DepartementService {
     public List<Departement> findAll() {
         return departementDao.findAll();
     }
+    
+//    @Override
+//    public Departement edit(Departement departement) {
+//        
+//        return departementDao.edit(departement);
+//    }
 
-   
+//<<<<<<< HEAD
+//
+////    @Override
+////    public List<Filiere> findAllFiliere(String libDepartement) {
+////        Departement myDepartement = departementDao.findByLibelle(libDepartement);
+////        return myDepartement.getFiliere();
+////
+////    }
+//
+////    @Override
+////    public Departement edit(long id, Departement departement) {
+////        Departement myDepartement = departementDao.findById(id).get();
+////        departement.setId(id);
+////        departementDao.save(departement);
+////        return departement;
+////    }
+//
+////    @Override
+////    public boolean existFiliere(Departement departement, String libelle) {
+////        List<Filiere> filieres = departementDao.findByDepartementLibelle(departement.getLibelle());
+////        for (int i = 0; i < filieres.size(); i++) {
+////            if (filieres.get(i).getLibelle().equals(libelle)) {
+////                return true;
+////            }
+////        }
+////        return false;
+////
+////    }
+//=======
+//   
+//>>>>>>> branch 'master' of https://github.com/imaneEmi/-inscription-v2.git
 }

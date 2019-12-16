@@ -6,6 +6,7 @@
 package com.fstg.inscription.service.impl;
 
 
+import com.fstg.inscription.bean.Filiere;
 import com.fstg.inscription.bean.PieceInscription;
 import com.fstg.inscription.dao.PieceInscriptionDao;
 
@@ -33,6 +34,7 @@ public class PieceInscriptionServiceImpl implements PieceInscriptionService{
           return pieceInscriptionDao.findAll();
     }
     
+  
    
     
 }

@@ -18,5 +18,7 @@ import org.springframework.stereotype.Repository;
 @Repository 
 public interface PieceFiliereDao extends JpaRepository<PieceFiliere, Long>{
         public List<PieceFiliere> findByFiliere(Filiere filiere);
+        
+       // public List<PieceFiliere> findByFiliereLibelleAndTypeFiliereLibelle (String libelleFiliere ,String libelleTypeFiliere);
 
 }
