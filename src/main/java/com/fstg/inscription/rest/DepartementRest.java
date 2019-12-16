@@ -47,7 +47,7 @@ public class DepartementRest {
         return departementService.findByLibelle(libelle);
     }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //    @GetMapping("/{departement}")
 //    public List<Filiere> findByDepartement(@PathVariable String libelle) {
 //        return departementService.findAllFiliere(libelle);
@@ -61,7 +61,7 @@ public class DepartementRest {
 //    public  Departement edit( @RequestBody Departement departement) {
 //        return departementService.edit(departement);
 //    }
-=======
->>>>>>> branch 'master' of https://github.com/imaneEmi/-inscription-v2.git
-
+//=======
+//>>>>>>> branch 'master' of https://github.com/imaneEmi/-inscription-v2.git
+//eger te qvecbget //
 }
