@@ -29,7 +29,7 @@ public class Departement implements Serializable{
     private long id;
     private String libelle;
     private String abreviation;
-    @OneToMany
+    @OneToMany(mappedBy = "departement")
     private List<Filiere> filiere;
     @OneToOne
     private Responsable responsable;

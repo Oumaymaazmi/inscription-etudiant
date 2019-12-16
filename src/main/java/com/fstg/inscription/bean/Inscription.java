@@ -28,13 +28,25 @@ public class Inscription implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ManyToOne
-    private Etudiant etudiant;
-    private int nbrEntree;
-    private int nbrExige;
+    @ManyToOne 
+    private Etudiant etudiant; 
     @ManyToOne
     private  Filiere filiere;
+    private boolean valider=false;
+    @Temporal(javax.persistence.TemporalType.DATE)// mapper avec le type Date de la base de données(3 types)
+    private Date dateInscription;
+    
+    @OneToMany(mappedBy = "inscription")
+    private List<PieceInscription> pieceInscriptions;
 
+    public boolean isValider() {
+        return valider;
+    }
+
+    public void setValider(boolean valider) {
+        this.valider = valider;
+    }
+ 
     public Filiere getFiliere() {
         return filiere;
     }
@@ -60,13 +72,7 @@ public class Inscription implements Serializable {
     public void setNbrExige(int nbrExige) {
         this.nbrExige = nbrExige;
     }
-    
-    @Temporal(javax.persistence.TemporalType.DATE)// mapper avec le type Date de la base de données(3 types)
-    private Date dateInscription;
-    
-     @OneToMany(mappedBy = "inscription")
-    private List<PieceInscription> pieceInscriptions;
-
+ 
     public Etudiant getEtudiant() {
         return etudiant;
     }

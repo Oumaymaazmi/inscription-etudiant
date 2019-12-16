@@ -39,6 +39,4 @@ public class DepartementServiceImpl implements DepartementService {
     }
 
    
-   
-
 }

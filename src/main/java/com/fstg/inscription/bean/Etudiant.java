@@ -68,16 +68,9 @@ public class Etudiant implements Serializable {
         this.dateNaissance = dateNaissance;
     }
 
-    public List<Inscription> getInscriptions() {
-        return inscriptions;
-    }
-
-    public void setInscriptions(List<Inscription> inscriptions) {
-        this.inscriptions = inscriptions;
-    }
     
-    @OneToMany(mappedBy = "etudiant")
-    private List<Inscription> inscriptions;
+    
+   
 
     public String getNom() {
         return nom;
