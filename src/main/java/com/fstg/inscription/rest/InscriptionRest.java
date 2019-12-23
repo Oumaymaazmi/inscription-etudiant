@@ -38,10 +38,10 @@ public class InscriptionRest {
    public List<Inscription> findByFiliere(@PathVariable String libelle){
        return inscriptionService.findByFiliereLibelle(libelle);   }
    
-   @GetMapping("/dateInscription/{dateInscription}")
-   public List<Inscription> findByDateInscription(@PathVariable Date dateInscription){
-       return inscriptionService.findByDateInscription(dateInscription);
-   }
+  // @GetMapping("/dateInscription/{dateInscription}")
+   //public List<Inscription> findByDateInscription(@PathVariable Date dateInscription){
+     //  return inscriptionService.findByDateInscription(dateInscription);
+   //}
   @GetMapping("/cne/{cne}")
    public List<Inscription> findByEtudiantCne(@PathVariable String cne){
        return inscriptionService.findByEtudiantCne(cne);

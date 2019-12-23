@@ -29,7 +29,7 @@ public class PieceInscription implements Serializable {
     
     @ManyToOne
     private Inscription inscription;
-
+ 
   
 
     

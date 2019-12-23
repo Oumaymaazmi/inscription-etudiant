@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface InscriptionService {
     public void save(Inscription inscription);
-    public List<Inscription> findByDateInscription(Date dateInscrition);
+   // public List<Inscription> findByDateInscription(Date dateInscrition);
     public List<Inscription> findByFiliereLibelle(String libelle);
      public List<Inscription> findByEtudiantCne(String cne);
 
