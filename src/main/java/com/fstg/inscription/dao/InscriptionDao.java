@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -19,8 +18,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InscriptionDao extends JpaRepository<Inscription, Long>{
-   // @Query("select i from Inscription as i  where  dateDébut <=: dateInscription and dateFin >=: dateInscription ")
-  //  public List<Inscription> findByDateInscription(@Param Date dateInscrition); //native=true requete sql 
+    //@Query("select i from InscriptionConfiguration as i  where  dateDébut <=?1 dateInscription and dateFin >=?1 dateInscription ")
+    public List<Inscription> findByDateInscription( Date dateInscrition);  //native=true requete sql 
     public List<Inscription> findByEtudiantCne(String cne);
     public List<Inscription> findByFiliereLibelle(String libelle);
 }

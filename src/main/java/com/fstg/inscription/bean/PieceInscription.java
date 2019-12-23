@@ -26,7 +26,7 @@ public class PieceInscription implements Serializable {
     @ManyToOne
     private Piece piece;
     private int nombrePresente;
-   
+    
     @ManyToOne
     private Inscription inscription;
 
