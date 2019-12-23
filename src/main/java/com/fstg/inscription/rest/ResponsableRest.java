@@ -37,4 +37,14 @@ public class ResponsableRest {
     public List<Responsable> findAll(){
         return responsableService.findAll();
     }
+    
+    @GetMapping("/cni/{cni}")
+    public Responsable findByCni(String cni){
+        return responsableService.findByCni(cni);
+    }
+    @GetMapping("/nom/{nom}")
+    public Responsable findByNom(String nom){
+        return responsableService.findByNom(nom);
+    }
+    
 }

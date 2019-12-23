@@ -26,9 +26,13 @@ public class PieceInscription implements Serializable {
     @ManyToOne
     private Piece piece;
     private int nombrePresente;
+    
     @ManyToOne
     private Inscription inscription;
+ 
+  
 
+    
     public Piece getPiece() {
         return piece;
     }

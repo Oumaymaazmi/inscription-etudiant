@@ -13,8 +13,11 @@ import java.util.List;
  * @author Imane
  */
 public interface DepartementService {
-    public void  save(Departement departement);
+
+    public void save(Departement departement);
+
     public List<Departement> findAll();
+
     public Departement findByLibelle(String libelle);
 
 

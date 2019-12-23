@@ -35,6 +35,8 @@ public class Filiere implements Serializable {
     private TypeFiliere typeFiliere;
     @OneToMany(mappedBy = "filiere")
     private List<Inscription> inscription;
+     @OneToMany(mappedBy = "filiere")
+    private List<PieceFiliere> pieceFiliere;
 
     public List<Inscription> getInscription() {
         return inscription;

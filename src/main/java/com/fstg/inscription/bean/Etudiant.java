@@ -1,4 +1,4 @@
-/*
+  /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -34,6 +34,7 @@ public class Etudiant implements Serializable {
     private String ville;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateNaissance; 
+    
 
     public String getCni() {
         return cni;
@@ -67,16 +68,9 @@ public class Etudiant implements Serializable {
         this.dateNaissance = dateNaissance;
     }
 
-    public List<Inscription> getInscriptions() {
-        return inscriptions;
-    }
-
-    public void setInscriptions(List<Inscription> inscriptions) {
-        this.inscriptions = inscriptions;
-    }
     
-    @OneToMany(mappedBy = "etudiant")
-    private List<Inscription> inscriptions;
+    
+   
 
     public String getNom() {
         return nom;

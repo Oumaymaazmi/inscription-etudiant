@@ -12,6 +12,7 @@
     <class>com.fstg.inscription.bean.TypeFiliere</class>
     <class>com.fstg.inscription.rest.FiliereRest</class>
     <class>com.fstg.inscription.service.impl.FiliereServiceImpl</class>
+    <class>com.fstg.inscription.bean.InscriptionConfiguration</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

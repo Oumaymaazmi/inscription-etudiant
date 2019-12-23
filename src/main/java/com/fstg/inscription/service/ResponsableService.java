@@ -16,5 +16,7 @@ public interface ResponsableService {
     public void save(Responsable responsable);
     public List<Responsable> findAll();
     public Responsable findByCni(String cni);
+    public Responsable findByNom(String nom);
+    
     
 }

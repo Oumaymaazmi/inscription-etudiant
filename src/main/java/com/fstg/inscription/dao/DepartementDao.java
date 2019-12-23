@@ -6,9 +6,8 @@
 package com.fstg.inscription.dao;
 
 import com.fstg.inscription.bean.Departement;
-
+import com.fstg.inscription.bean.Filiere;
 import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

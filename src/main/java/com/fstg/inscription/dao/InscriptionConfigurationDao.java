@@ -5,21 +5,21 @@
  */
 package com.fstg.inscription.dao;
 
-import com.fstg.inscription.bean.Filiere;
+import com.fstg.inscription.bean.InscriptionConfiguration;
+import java.util.Date;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
+;
 /**
  *
  * @author momo
  */
 @Repository
-public interface FiliereDao extends JpaRepository<Filiere, Long> {
+public interface InscriptionConfigurationDao extends JpaRepository<InscriptionConfiguration, Long>{
+    public InscriptionConfiguration findByFiliere(String filiere);
+    public List<InscriptionConfiguration> findByDateDebut(Date dateDebut);
+    public List<InscriptionConfiguration> findByDateFin(Date dateFin);
 
-    public Filiere findBylibelle(String libelle);
-
-
-
-   
+    
 }

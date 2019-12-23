@@ -35,5 +35,9 @@ public class ResponsableServiceImpl  implements ResponsableService{
     public Responsable findByCni(String cni) {
            return responsableDao.findByCni(cni);
     }
+    @Override
+     public Responsable findByNom(String nom) {
+           return responsableDao.findByNom(nom);
+    }
     
 }

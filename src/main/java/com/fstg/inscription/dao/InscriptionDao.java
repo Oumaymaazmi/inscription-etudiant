@@ -9,6 +9,7 @@ import com.fstg.inscription.bean.Inscription;
 import java.util.Date;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -17,7 +18,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InscriptionDao extends JpaRepository<Inscription, Long>{
-    public List<Inscription> findByDateInscription(Date dateInscrition);
-    public Inscription findByEtudiantCne(String cne);
+   // @Query("select i from InscriptionConfiguration i  where  dateDébut <=?1  and dateFin >=?1")
+   // public List<Inscription> findByDateInscription( Date dateInscrition);  //native=true requete sql 
+    public List<Inscription> findByEtudiantCne(String cne);
     public List<Inscription> findByFiliereLibelle(String libelle);
 }

@@ -16,6 +16,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ResponsableDao  extends JpaRepository<Responsable, Long>{
         public Responsable findByCni(String cni);
+        public Responsable findByNom(String nom);
 
 }
   

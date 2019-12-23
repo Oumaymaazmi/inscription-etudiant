@@ -23,11 +23,7 @@ public class EtudiantServiceImpl implements EtudiantService {
     @Autowired
     private EtudiantDao etudiantDao;
 
-    @Transactional
-    @Override
-    public void deleteById(Long id) {
-        etudiantDao.deleteById(id);
-    }
+    
 
     @Override
     public void save(Etudiant etudiant) {

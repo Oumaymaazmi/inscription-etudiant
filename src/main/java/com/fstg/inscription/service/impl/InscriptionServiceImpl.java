@@ -8,6 +8,7 @@ package com.fstg.inscription.service.impl;
 import com.fstg.inscription.bean.Inscription;
 import com.fstg.inscription.dao.InscriptionDao;
 import com.fstg.inscription.service.InscriptionService;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +30,7 @@ public class InscriptionServiceImpl implements InscriptionService{
         inscriptionDao.save(inscription);
     }
     
-    @Override
-    public List<Inscription> findByDateInscription(Date dateInscrition) {
-        return inscriptionDao.findByDateInscription(dateInscrition);
-    }
+  
 
     @Override
     public List<Inscription> findByFiliereLibelle(String libelle) {
@@ -41,7 +39,7 @@ public class InscriptionServiceImpl implements InscriptionService{
 
     
     @Override
-    public Inscription findByEtudiantCne(String cne) {
+    public List<Inscription> findByEtudiantCne(String cne) {
         return inscriptionDao.findByEtudiantCne(cne);
     }
 
@@ -49,6 +47,11 @@ public class InscriptionServiceImpl implements InscriptionService{
     public List<Inscription> findAll() {
         return inscriptionDao.findAll();
     }
+
+   // @Override
+   // public List<Inscription> findByDateInscription(Date dateInscrition) {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
 
     
     
