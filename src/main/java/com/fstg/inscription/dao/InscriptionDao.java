@@ -20,6 +20,6 @@ import org.springframework.stereotype.Repository;
 public interface InscriptionDao extends JpaRepository<Inscription, Long>{
    // @Query("select i from InscriptionConfiguration i  where  dateDébut <=?1  and dateFin >=?1")
    // public List<Inscription> findByDateInscription( Date dateInscrition);  //native=true requete sql 
-    public List<Inscription> findByEtudiantCne(String cne);
+    public List<Inscription> findByEtudiantCne(String cne); 
     public List<Inscription> findByFiliereLibelle(String libelle);
 }

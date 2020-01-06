@@ -6,10 +6,11 @@
 package com.fstg.inscription.service.impl;
 
 import com.fstg.inscription.bean.Inscription;
+import com.fstg.inscription.dao.FiliereDao;
 import com.fstg.inscription.dao.InscriptionDao;
+import com.fstg.inscription.service.EtudiantService;
+import com.fstg.inscription.service.FiliereService;
 import com.fstg.inscription.service.InscriptionService;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,9 +25,15 @@ public class InscriptionServiceImpl implements InscriptionService{
 
     @Autowired
     private  InscriptionDao inscriptionDao;
+    @Autowired
+    private EtudiantService etudiantService;
+    @Autowired
+    private FiliereService filiereService;
     
     @Override
     public void save(Inscription inscription) {
+        inscription.setEtudiant(etudiantService.findByCne(inscription.getEtudiant().getCne()));
+        inscription.setFiliere( filiereService.findBylibelle(inscription.getFiliere().getLibelle()));        
         inscriptionDao.save(inscription);
     }
     
@@ -40,7 +47,7 @@ public class InscriptionServiceImpl implements InscriptionService{
     
     @Override
     public List<Inscription> findByEtudiantCne(String cne) {
-        return inscriptionDao.findByEtudiantCne(cne);
+         return inscriptionDao.findByEtudiantCne(cne);
     }
 
     @Override

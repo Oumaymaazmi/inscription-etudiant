@@ -5,6 +5,8 @@
  */
 package com.fstg.inscription.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -74,11 +76,13 @@ public class Inscription implements Serializable {
     public void setDateInscription(Date dateInscription) {
         this.dateInscription = dateInscription;
     }
-
+    
+    @JsonIgnore
     public List<PieceInscription> getPieceInscriptions() {
         return pieceInscriptions;
     }
 
+    @JsonSetter
     public void setPieceInscriptions(List<PieceInscription> pieceInscriptions) {
         this.pieceInscriptions = pieceInscriptions;
     }

@@ -5,6 +5,8 @@
  */
 package com.fstg.inscription.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
@@ -37,13 +39,21 @@ public class Filiere implements Serializable {
     private List<Inscription> inscription;
      @OneToMany(mappedBy = "filiere")
     private List<PieceFiliere> pieceFiliere;
-
+  @JsonIgnore
     public List<Inscription> getInscription() {
         return inscription;
     }
-
+@JsonSetter
     public void setInscription(List<Inscription> inscription) {
         this.inscription = inscription;
+    }
+@JsonIgnore
+    public List<PieceFiliere> getPieceFiliere() {
+        return pieceFiliere;
+    }
+@JsonSetter
+    public void setPieceFiliere(List<PieceFiliere> pieceFiliere) {
+        this.pieceFiliere = pieceFiliere;
     }
 
     public Long getId() {
